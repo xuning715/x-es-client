@@ -1,0 +1,40 @@
+#navigation, #navigation ul li {
+    list-style-type:none;
+}
+
+/*一级菜单*/
+#navigation li {
+    float:left;
+    --position:relative;
+    font-size:14px;
+    font-weight:bold;
+    color:#15428B;
+    padding-left:5px;
+    padding-right:15px;
+    word-break:keep-all;
+    cursor:pointer;
+}
+
+/*二级菜单容器*/
+#navigation li ul {
+    width:300px;
+    border:1px solid #7697BC;
+    display:none;
+    position:absolute;
+    padding-left:0px;
+    background-color:#f4f7fe;
+    z-index:100;
+}
+
+/*二级菜单*/
+#navigation li ul li {
+    width:300px;
+    font-size:12px;
+    font-weight:normal;
+    background-color:#f4f7fe;
+    padding-left:10px;
+    padding-right:0px;
+    padding-top:5px;
+    padding-bottom:5px;
+    z-index:200;
+}

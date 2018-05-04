@@ -1,0 +1,94 @@
+.xWin {
+	position:absolute;
+	cursor:default;
+	border-width:1px;
+	border-style:outset;
+	padding:0px;
+	font-size:12px;
+	overflow:hidden;
+	display:block;
+}
+
+.xWin .xWinSetting {
+	display:none;
+}
+
+.xWin .xTitle {
+	color:#000000;
+	height:30px;
+	display:block;
+	background:url(../images/xwin/xwin_title_bg.jpg) repeat-x;
+	vertical-align:middle;
+}
+
+.xWin .xTitle input {
+	background-color:transparent;
+	color:#FFFFFF;
+	border-width:0px;
+	border-style:solid;
+	height:20px;
+	width:16px;
+	line-height:20px;
+	font-family:webdings;
+	font-size:10px;
+	margin:0px;
+	padding:0px;
+	text-align:center;
+	float:right;
+	display:block;
+}
+
+.xWin .xTitle img {
+	background-color:transparent;
+	color:#FFFFFF;
+	border-width:0px;
+	margin:0px;
+	padding-top:6px;
+	padding-left:1px;
+	text-align:center;
+	float:left;
+	display:block;
+}
+
+.xWin .xTitle .xWinTitleCloseButton {
+}
+
+.xWin .xTitle .xWinTitleMaxButton {
+}
+
+.xWin .xTitle .xWinTitleMinButton {
+}
+
+.xWin .xTitle .xWinTitleContent {
+	color:#000000;
+	font-size:12px;
+	height:30px;
+	line-height:20px;
+	margin:0px;
+	padding-top:5px;
+	padding-left:3px;
+	float:left;
+	display:block;
+	overflow:hidden;
+	white-space:nowrap;
+	text-align:left;
+	cursor:default;
+}
+
+.xWin .xWinBody {
+	margin:0px;
+	background-color:#FFFFFF;
+	color:#000000;
+	padding:3px;
+	font-size:12px;
+	overflow:auto;
+	position:relative;
+	display:block;
+}
+
+.xShadow {
+	position:absolute;
+	display:block;
+	background-Color:#c9c9c9;
+	color:#FFFFFF;
+}

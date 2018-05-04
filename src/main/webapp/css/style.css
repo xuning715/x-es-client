@@ -1,0 +1,142 @@
+.nav1 {
+    background-image:url(../images/ext/tabs/nav1.gif);
+}
+
+.nav2 {
+    background-image:url(../images/ext/tabs/nav2.gif);
+}
+
+.nav3 {
+    background-image:url(../images/ext/tabs/nav3.gif);
+}
+
+.tabs {
+    background-image:url(../images/ext/tabs/tabs.gif);
+}
+
+.nobordertd{
+    border:0px;
+    font-size:13px;
+    text-align:left;
+    vertical-align:center;
+}
+
+TEXTAREA{
+    border:1px solid #c9c9c9;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:13px;
+    color:#4682B4;
+    OVERFLOW:AUTO;
+}
+
+IMG {
+    cursor:hand;
+}
+
+.inputText {
+    border:1px solid #c9c9c9;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    cursor:hand;
+    width: 130px;
+}
+
+.line_input{
+    cursor:hand;
+    border-bottom-color:#6699cc;
+    border-bottom-width:1px;
+    border-top-width:0px;
+    border-left-width:0px;
+    border-right-width:0px;
+    FONT-SIZE: 12px;
+    WIDTH: 130px;
+    color:#4682B4;
+    background-image: url(../images/common/button_bg.gif);
+    background-repeat: repeat-x;
+}
+
+.bigInput{
+    background:#ffffff;
+    border-bottom-color:#ffffff;
+    border-bottom-width:1px;
+    border-top-width:0px;
+    border-left-width:0px;
+    border-right-width:0px;
+    solid #ffffff; color: #000000;
+    FONT-SIZE: 12px;
+    FONT-STYLE: normal;
+    FONT-VARIANT: normal;
+    FONT-WEIGHT: normal;
+    LINE-HEIGHT: normal
+}
+
+fieldset{
+    border:1px solid #c9c9c9;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:13px;
+    color:#4682B4;
+}
+
+legend{
+    color:#4682B4;
+    font-size:14;
+}
+
+INPUT[type="text"], 
+INPUT[type="password"] {
+    border:1px solid #c9c9c9;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:15px;
+    cursor:hand;
+    width: 150px;
+}
+
+A {
+    text-decoration: NONE;
+    color:#15428B;
+    font-size:12px;
+}
+
+A:hover {
+    text-decoration: NONE;
+    color:#FF3300;
+}
+
+BUTTON {
+    text-decoration: none;
+    text-align: center;
+    vertical-align: top;
+    color:#333399;
+    background-image: url(../images/common/button_bg.gif);
+    background-repeat: repeat-x;
+    border: 2px solid white;
+    padding-top: 3px;
+    padding-bottom: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    overflow:visible;
+    background-position: top;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    cursor:hand;
+}
+
+FORM {
+  margin:0px;
+}
+
+BODY {
+  font-size:12px;
+}
+
+.DIV {
+    background-color: white;
+    font-size:12px;
+    width:100%;
+    border: 1px solid #0099FF;
+}
+
+table {
+    font-size:12px;
+    width:100%;
+}
