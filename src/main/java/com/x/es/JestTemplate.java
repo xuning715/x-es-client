@@ -74,17 +74,26 @@ public class JestTemplate {
             Settings.Builder settingsBuilder = Settings.builder();
             settingsBuilder.put("number_of_shards", shardNum);
             settingsBuilder.put("number_of_replicas", replicaNum);
+
             settingsBuilder.put("index.analysis.filter.synonym_filter.type", "synonym");
             settingsBuilder.put("index.analysis.filter.synonym_filter.synonyms_path", "synonym.txt");
             settingsBuilder.put("index.analysis.filter.synonym_filter.ignore_case", true);
+
             settingsBuilder.put("index.analysis.filter.pinyin_filter.type", "pinyin");
             settingsBuilder.put("index.analysis.filter.pinyin_filter.first_letter", "prefix");
             settingsBuilder.put("index.analysis.filter.pinyin_filter.padding_char", " ");
-            settingsBuilder.put("index.analysis.analyzer.ik_pinyin_synonym_analyzer.type", "custom");
+
+            settingsBuilder.put("index.analysis.analyzer.ik_pinyin_synonym_analyzer.type", "pinyin");
             settingsBuilder.put("index.analysis.analyzer.ik_pinyin_synonym_analyzer.tokenizer", "ik_smart");
+            settingsBuilder.put("index.analysis.analyzer.ik_pinyin_synonym_analyzer.keep_separate_first_letter", "false");
+            settingsBuilder.put("index.analysis.analyzer.ik_pinyin_synonym_analyzer.lowercase", "true");
+            settingsBuilder.put("index.analysis.analyzer.ik_pinyin_synonym_analyzer.limit_first_letter_length", "32");
+            settingsBuilder.put("index.analysis.analyzer.ik_pinyin_synonym_analyzer.keep_original", "true");
+            settingsBuilder.put("index.analysis.analyzer.ik_pinyin_synonym_analyzer.keep_full_pinyin", "true");
             settingsBuilder.put("index.analysis.analyzer.ik_pinyin_synonym_analyzer.filter.0", "synonym_filter");
             settingsBuilder.put("index.analysis.analyzer.ik_pinyin_synonym_analyzer.filter.1", "pinyin_filter");
             settingsBuilder.put("index.analysis.analyzer.ik_pinyin_synonym_analyzer.filter.2", "word_delimiter");
+
             JestResult jr = getJestClient().execute(new CreateIndex.Builder(index).settings(settingsBuilder.build()).build());
             flag = jr.isSucceeded();
         } catch (Exception e) {
