@@ -11,8 +11,6 @@ import io.searchbox.indices.CreateIndex;
 import io.searchbox.indices.DeleteIndex;
 import io.searchbox.indices.mapping.GetMapping;
 import io.searchbox.indices.mapping.PutMapping;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilder;
@@ -24,7 +22,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class JestTemplate {
-    private static final Logger logger = LogManager.getLogger(JestTemplate.class);
 
     private static JestClientFactory factory;
     private static JestClient jestClient;
@@ -205,13 +202,13 @@ public class JestTemplate {
         searchSourceBuilder.from(pageIndex);
         searchSourceBuilder.size(pageSize);
         String query = searchSourceBuilder.toString();
-        logger.info(query);
+        System.out.println(query);
         SearchResult result = this.searchDocument(index, type, query);
         List<T> list = new ArrayList<T>();
         if (result != null) {
             List<SearchResult.Hit<T, Void>> hits = result.getHits(clazz);
             if (hits != null && hits.size() > 0) {
-                logger.info("Size:" + hits.size());
+                System.out.println("Size:" + hits.size());
                 for (SearchResult.Hit<T, Void> hit : hits) {
                     T t = hit.source;
                     list.add(t);

@@ -1,23 +1,5 @@
 package com.x.es;
 
-import com.google.gson.GsonBuilder;
-import io.searchbox.client.JestClient;
-import io.searchbox.client.JestClientFactory;
-import io.searchbox.client.JestResult;
-import io.searchbox.client.config.HttpClientConfig;
-import io.searchbox.core.*;
-import io.searchbox.indices.CreateIndex;
-import io.searchbox.indices.DeleteIndex;
-import io.searchbox.indices.mapping.GetMapping;
-import io.searchbox.indices.mapping.PutMapping;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-import org.elasticsearch.common.settings.Settings;
-import org.elasticsearch.index.query.QueryBuilder;
-import org.elasticsearch.index.query.QueryBuilders;
-import org.elasticsearch.search.builder.SearchSourceBuilder;
-
-import java.io.IOException;
 import java.net.URLEncoder;
 import java.sql.Connection;
 import java.sql.DriverManager;
